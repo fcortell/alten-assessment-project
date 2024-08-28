@@ -1,0 +1,6 @@
+@alten_assessment_project.API_HostAddress = http://localhost:5171
+
+GET {{alten_assessment_project.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
