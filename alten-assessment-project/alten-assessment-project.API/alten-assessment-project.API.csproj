@@ -11,4 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\alten-assessment-project.Domain\alten-assessment-project.Domain.csproj" />
+    <ProjectReference Include="..\alten-assessment-project.Infrastructure\alten-assessment-project.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

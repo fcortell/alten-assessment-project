@@ -1,0 +1,36 @@
+version: '3.4'
+
+services:
+  alten_assessment_project_api:
+    image: "alten-assessment-project-api:latest"
+    container_name: "alten-assessment-project-api"
+    build:
+      context: .
+      dockerfile: alten-assessment-project/alten-assessment-project.API/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+      DOTNET_RUNNING_IN_CONTAINER: true
+      ConnectionStrings__Database: "Server=aap_local_db,1433; Database=aap; User Id=sa; Password=aPassword1!; TrustServerCertificate=true;"
+      ConnectionStrings__Hangfire: "Server=aap_local_db,1433; Database=AAPBackgroundJobs; User Id=sa; Password=aPassword1!; TrustServerCertificate=true;"
+    ports:
+      - "8001:80"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+    depends_on:
+      aap_local_db:
+       condition: service_healthy
+  
+  aap_local_db:
+    image: "mcr.microsoft.com/mssql/server:2019-CU24-ubuntu-20.04"
+    container_name: "aap-local-db"
+    ports:
+      - "8003:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "aPassword1!"
+    healthcheck:
+      test: ["CMD", "/opt/mssql-tools/bin/sqlcmd", "-Usa", "-PaPassword1!", "-Q", "select 1"]
+      interval: 1s
+      retries: 20
+      start_period: 3s
