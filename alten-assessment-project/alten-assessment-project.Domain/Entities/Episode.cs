@@ -8,7 +8,7 @@ namespace alten_assessment_project.Domain.Entities
 {
     public class Episode : BaseEntity
     {
-        public Uri Href { get; set; }
-        public string Name { get; set; }
+        public string? Href { get; set; }
+        public string? Name { get; set; }
     }
 }

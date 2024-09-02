@@ -43,6 +43,8 @@ namespace alten_assessment_project.Infrastructure
             services.AddScoped(typeof(IGenreRepository), typeof(GenreRepository));
             services.AddScoped(typeof(IExternalRepository), typeof(ExternalRepository));
             services.AddScoped(typeof(IEpisodeRepository), typeof(EpisodeRepository));
+            services.AddScoped(typeof(ISelfRepository), typeof(SelfRepository));
+            services.AddScoped(typeof(IWebChannelRepository), typeof(WebChannelRepository));
 
             return services;
         }

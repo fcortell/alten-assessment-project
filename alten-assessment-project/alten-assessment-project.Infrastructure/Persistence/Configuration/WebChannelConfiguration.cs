@@ -1,25 +1,29 @@
-﻿using alten_assessment_project.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using alten_assessment_project.Domain.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
 
 namespace alten_assessment_project.Infrastructure.Persistence.Configuration
 {
-    internal class NetworksConfiguration : IEntityTypeConfiguration<Network>
+    public class WebChannelConfiguration : IEntityTypeConfiguration<WebChannel>
     {
-        public void Configure(EntityTypeBuilder<Network> builder)
+        public void Configure(EntityTypeBuilder<WebChannel> builder)
         {
             builder.Property(u => u.Id).HasColumnName("Id");
             builder.Property(u => u.Id)
                     .IsRequired();
             builder.HasIndex(u => u.Id);
 
-            builder.Property(u => u.CountryId).HasColumnName("CountryId");
-            builder.HasIndex(u => u.CountryId);
-
             builder.Property(u => u.Name).HasColumnName("Name");
             builder.Property(u => u.Name)
                     .IsRequired();
             builder.HasIndex(u => u.Name);
+
+
         }
     }
 }

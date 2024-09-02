@@ -11,4 +11,12 @@
     <PackageReference Include="MediatR" Version="12.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\dependencies\tvmazeAPIClient\tvmazeAPIClient.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Enums\" />
+  </ItemGroup>
+
 </Project>

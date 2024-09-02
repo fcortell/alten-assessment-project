@@ -21,7 +21,7 @@ namespace alten_assessment_project.Infrastructure.Persistence
             Entities = DbContext.Set<TEntity>();
         }
 
-        public async Task CommitChangesAsync(CancellationToken cancellationToken)
+        public async Task SaveChangesAsync(CancellationToken cancellationToken)
         {
             await DbContext.SaveChangesAsync(cancellationToken);
         }
@@ -49,6 +49,13 @@ namespace alten_assessment_project.Infrastructure.Persistence
         public void Insert(TEntity entity)
         {
             Entities.Add(entity);
+        }
+
+        public long InsertAndGetId(TEntity entity)
+        {
+            Insert(entity);
+            DbContext.SaveChanges();
+            return entity.Id;
         }
 
         public void Update(TEntity entity)

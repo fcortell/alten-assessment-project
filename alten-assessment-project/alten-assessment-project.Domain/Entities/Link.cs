@@ -8,7 +8,7 @@ namespace alten_assessment_project.Domain.Entities
 {
     public class Link : BaseEntity
     {
-        public long SelfId { get; set; }
+        public long? SelfId { get; set; }
         public long? PreviousEpisodeId { get; set; }
         public long? NextEpisodeId { get; set; }
 

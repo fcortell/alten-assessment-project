@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\alten-assessment-project.Application\alten-assessment-project.Application.csproj" />
     <ProjectReference Include="..\alten-assessment-project.Domain\alten-assessment-project.Domain.csproj" />
   </ItemGroup>
 

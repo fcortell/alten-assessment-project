@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace alten_assessment_project.Domain.Entities
 {
-    public class Network : BaseEntity
+    public class WebChannel : BaseEntity
     {
         public string Name { get; set; }
         public long? CountryId { get; set; }

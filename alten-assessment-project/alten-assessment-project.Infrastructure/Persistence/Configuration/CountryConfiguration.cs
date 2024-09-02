@@ -17,21 +17,6 @@ namespace alten_assessment_project.Infrastructure.Persistence.Configuration
             builder.Property(u => u.Id)
                     .IsRequired();
             builder.HasIndex(u => u.Id);
-
-            builder.Property(u => u.Name).HasColumnName("Name");
-            builder.Property(u => u.Name)
-                    .IsRequired();
-            builder.HasIndex(u => u.Name);
-
-            builder.Property(u => u.Code).HasColumnName("Code");
-            builder.Property(u => u.Code)
-                    .IsRequired();
-            builder.HasIndex(u => u.Code);
-
-            builder.Property(u => u.Timezone).HasColumnName("Timezone");
-            builder.Property(u => u.Timezone)
-                    .IsRequired();
-            builder.HasIndex(u => u.Timezone);
         }
     }
 }

@@ -18,10 +18,10 @@ namespace alten_assessment_project.Infrastructure.Persistence.Configuration
                     .IsRequired();
             builder.HasIndex(u => u.Time);
 
-            builder.Property(u => u.Day).HasColumnName("Day");
-            builder.Property(u => u.Day)
+            builder.Property(u => u.Days).HasColumnName("Days");
+            builder.Property(u => u.Days)
                     .IsRequired();
-            builder.HasIndex(u => u.Day);
+            builder.HasIndex(u => u.Days);
         }
     }
 }

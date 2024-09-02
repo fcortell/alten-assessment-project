@@ -20,6 +20,9 @@ namespace alten_assessment_project.Infrastructure.Persistence
         public DbSet<Genre> Genres { get; set; } = null!;
         public DbSet<Country> Countries { get; set; } = null!;
 
+        public DbSet<WebChannel> WebChannels { get; set; }
+        public DbSet<Self> Selfs { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLazyLoadingProxies();
@@ -38,6 +41,8 @@ namespace alten_assessment_project.Infrastructure.Persistence
             builder.ApplyConfiguration(new SchedulesConfiguration());
             builder.ApplyConfiguration(new GenreConfiguration());
             builder.ApplyConfiguration(new CountryConfiguration());
+            builder.ApplyConfiguration(new WebChannelConfiguration());
+            builder.ApplyConfiguration(new SelfConfiguration());
 
         }
     }

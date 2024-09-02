@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace alten_assessment_project.Domain.Entities
 {
-    public class External : BaseEntity
+    public class Self : BaseEntity
     {
-        public int? Tvrage { get; set; }
-        public int? Thetvdb { get; set; }
-        public string? Imdb { get; set; }
+        [JsonProperty("href")]
+        public string Href { get; set; }
     }
 }

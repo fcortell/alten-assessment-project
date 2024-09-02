@@ -9,7 +9,7 @@ namespace alten_assessment_project.Domain
 {
     public interface IGenericRepository<TEntity> where TEntity : class
     {
-        Task CommitChangesAsync(CancellationToken cancellationToken);
+        Task SaveChangesAsync(CancellationToken cancellationToken);
 
         void Delete(TEntity entity);
 
@@ -20,6 +20,8 @@ namespace alten_assessment_project.Domain
         Task<TEntity?> GetByIdAsync(long id);
 
         void Insert(TEntity entity);
+
+        long InsertAndGetId(TEntity entity);
 
         void Update(TEntity entity);
     }

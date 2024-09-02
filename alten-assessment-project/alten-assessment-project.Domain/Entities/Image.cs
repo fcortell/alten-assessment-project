@@ -8,7 +8,7 @@ namespace alten_assessment_project.Domain.Entities
 {
     public class Image : BaseEntity
     {
-        public Uri Medium { get; set; }
-        public Uri Original { get; set; }
+        public string Medium { get; set; }
+        public string Original { get; set; }
     }
 }
