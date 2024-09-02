@@ -9,8 +9,6 @@ namespace alten_assessment_project.Domain
 {
     public interface IGenericRepository<TEntity> where TEntity : class
     {
-        Task SaveChangesAsync(CancellationToken cancellationToken);
-
         void Delete(TEntity entity);
 
         Task<IEnumerable<TEntity?>> Find(Expression<Func<TEntity, bool>> predicate);

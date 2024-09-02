@@ -21,11 +21,6 @@ namespace alten_assessment_project.Infrastructure.Persistence
             Entities = DbContext.Set<TEntity>();
         }
 
-        public async Task SaveChangesAsync(CancellationToken cancellationToken)
-        {
-            await DbContext.SaveChangesAsync(cancellationToken);
-        }
-
         public void Delete(TEntity entity)
         {
             Entities.Remove(entity);

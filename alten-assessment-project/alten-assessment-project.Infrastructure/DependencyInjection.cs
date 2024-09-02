@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using alten_assessment_project.Domain;
 using alten_assessment_project.Domain.Repositories;
 using alten_assessment_project.Infrastructure.Persistence;
 using alten_assessment_project.Infrastructure.Persistence.Repositories;
@@ -45,7 +46,7 @@ namespace alten_assessment_project.Infrastructure
             services.AddScoped(typeof(IEpisodeRepository), typeof(EpisodeRepository));
             services.AddScoped(typeof(ISelfRepository), typeof(SelfRepository));
             services.AddScoped(typeof(IWebChannelRepository), typeof(WebChannelRepository));
-
+            services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
             return services;
         }
     }
