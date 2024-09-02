@@ -1,10 +1,12 @@
 ﻿using alten_assessment_project.Application.Job;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace alten_assessment_project.API.Controllers
 {
     [ApiController]
     [Route("Job")]
+    [Authorize(AuthenticationSchemes = "ApiKey")]
     public class JobController : BaseController
     {
         /// <summary>

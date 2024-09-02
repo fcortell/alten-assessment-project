@@ -2,8 +2,11 @@
 using alten_assessment_project.API.Setup;
 using alten_assessment_project.Infrastructure;
 using alten_assessment_project.Application;
+using alten_assessment_project.API.Middleware;
+using alten_assessment_project.API.Middleware.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Configuration.SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production"}.json", optional: true)
@@ -18,7 +21,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
-
+builder.Services.AddAuthentication("ApiKey").AddScheme<ApiKeyAuthenticationSchemeOptions, ApiKeyAuthenticationHandler>("ApiKey", opts => opts.ApiKey = builder.Configuration.GetValue<string>("AllowedApiKeys")
+);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -31,6 +35,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
+
 
 app.MapControllers();
 app.EnsurePersistenceIsReady();
