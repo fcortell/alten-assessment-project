@@ -21,7 +21,7 @@ Notes
 
 ## Architecture
 
-The architecture of the project is based on the Clean Architecture, which is a software design philosophy that separates the elements of a software system into distinct layers that are independent of each other. The main goal of this architecture is to make the software more testable, maintainable, and flexible.
+The architecture of the project is based on the Clean Architecture, which is a software design philosophy that separates the elements of a software system into distinct layers that are independent of each other. The main goal of this architecture is to make the software more testable, maintainable, and flexible. It uses a Generic Repository pattern to avoid code duplication on basic database entities and transactions
 
 ## How to run the app
 
