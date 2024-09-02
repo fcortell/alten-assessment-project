@@ -9,5 +9,6 @@ namespace alten_assessment_project.Domain.Repositories
 {
     public interface IGenreRepository : IGenericRepository<Genre>
     {
+        Task<IEnumerable<Genre>> GetAllByIdAsync(long showId);
     }
 }

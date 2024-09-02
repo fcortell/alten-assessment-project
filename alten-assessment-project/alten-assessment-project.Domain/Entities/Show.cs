@@ -27,7 +27,7 @@ namespace alten_assessment_project.Domain.Entities
         public long? NetworkId { get; set; }
         public virtual Network Network { get; set; }
         public long? WebChannelId { get; set; }
-        public virtual Network WebChannel { get; set; }
+        public virtual WebChannel WebChannel { get; set; }
         public long? ExternalId { get; set; }
         public virtual External External { get; set; }
         public long? ImageId { get; set; }
