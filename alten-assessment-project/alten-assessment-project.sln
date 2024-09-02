@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35201.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "alten-assessment-project.API", "alten-assessment-project.API\alten-assessment-project.API.csproj", "{CD6D76DC-94F2-4B9A-8B09-980E5EE7D714}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "alten-assessment-project.Application", "alten-assessment-project.Application\alten-assessment-project.Application.csproj", "{B130C69B-02E3-4210-916F-1E2AF3C6F228}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "alten-assessment-project.Domain", "alten-assessment-project.Domain\alten-assessment-project.Domain.csproj", "{DE6F599F-AD14-456B-8025-59CD2F4E0D1C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "alten-assessment-project.Infrastructure", "alten-assessment-project.Infrastructure\alten-assessment-project.Infrastructure.csproj", "{4D89F404-18E6-41D8-8EB5-4A98A77F2096}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{39872FA3-F673-43F9-993D-6E92EED101BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "alten-assessment-project.Test", "test\alten-assessment-project.Test\alten-assessment-project.Test.csproj", "{1C0F99F2-EF80-431E-8B95-32F8AFFCE2AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{C7C66142-33FF-4750-9C07-8A7E861044B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tvmazeAPIClient", "dependencies\tvmazeAPIClient\tvmazeAPIClient.csproj", "{59EB7EE7-2329-49AA-B703-60B05169B577}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alten-assessment-project.Application.Tests.Unit", "test\alten-assessment-project.Application.Tests.Unit\alten-assessment-project.Application.Tests.Unit.csproj", "{72185DEA-C38A-49A8-936F-EB3739731BAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alten-assessment-project.Domain.Tests.Unit", "test\alten-assessment-project.Domain.Tests.Unit\alten-assessment-project.Domain.Tests.Unit.csproj", "{DB51354B-252C-421A-B725-7A7F546CDB06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD6D76DC-94F2-4B9A-8B09-980E5EE7D714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD6D76DC-94F2-4B9A-8B09-980E5EE7D714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD6D76DC-94F2-4B9A-8B09-980E5EE7D714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD6D76DC-94F2-4B9A-8B09-980E5EE7D714}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B130C69B-02E3-4210-916F-1E2AF3C6F228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B130C69B-02E3-4210-916F-1E2AF3C6F228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B130C69B-02E3-4210-916F-1E2AF3C6F228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B130C69B-02E3-4210-916F-1E2AF3C6F228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE6F599F-AD14-456B-8025-59CD2F4E0D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE6F599F-AD14-456B-8025-59CD2F4E0D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE6F599F-AD14-456B-8025-59CD2F4E0D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE6F599F-AD14-456B-8025-59CD2F4E0D1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D89F404-18E6-41D8-8EB5-4A98A77F2096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D89F404-18E6-41D8-8EB5-4A98A77F2096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D89F404-18E6-41D8-8EB5-4A98A77F2096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D89F404-18E6-41D8-8EB5-4A98A77F2096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C0F99F2-EF80-431E-8B95-32F8AFFCE2AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C0F99F2-EF80-431E-8B95-32F8AFFCE2AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C0F99F2-EF80-431E-8B95-32F8AFFCE2AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C0F99F2-EF80-431E-8B95-32F8AFFCE2AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59EB7EE7-2329-49AA-B703-60B05169B577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59EB7EE7-2329-49AA-B703-60B05169B577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59EB7EE7-2329-49AA-B703-60B05169B577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59EB7EE7-2329-49AA-B703-60B05169B577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72185DEA-C38A-49A8-936F-EB3739731BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72185DEA-C38A-49A8-936F-EB3739731BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72185DEA-C38A-49A8-936F-EB3739731BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72185DEA-C38A-49A8-936F-EB3739731BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB51354B-252C-421A-B725-7A7F546CDB06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB51354B-252C-421A-B725-7A7F546CDB06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB51354B-252C-421A-B725-7A7F546CDB06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB51354B-252C-421A-B725-7A7F546CDB06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1C0F99F2-EF80-431E-8B95-32F8AFFCE2AA} = {39872FA3-F673-43F9-993D-6E92EED101BF}
+		{59EB7EE7-2329-49AA-B703-60B05169B577} = {C7C66142-33FF-4750-9C07-8A7E861044B8}
+		{72185DEA-C38A-49A8-936F-EB3739731BAF} = {39872FA3-F673-43F9-993D-6E92EED101BF}
+		{DB51354B-252C-421A-B725-7A7F546CDB06} = {39872FA3-F673-43F9-993D-6E92EED101BF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {173966B3-7A7D-4147-AC4D-5421AEBE78BA}
+	EndGlobalSection
+EndGlobal

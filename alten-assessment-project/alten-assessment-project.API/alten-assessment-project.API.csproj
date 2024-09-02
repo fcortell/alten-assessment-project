@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>alten_assessment_project.API</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ben.Demystifier" Version="0.4.1" />
+    <PackageReference Include="FluentResults" Version="3.16.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\alten-assessment-project.Domain\alten-assessment-project.Domain.csproj" />
+    <ProjectReference Include="..\alten-assessment-project.Infrastructure\alten-assessment-project.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
